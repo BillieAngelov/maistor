@@ -11,7 +11,7 @@ const HeaderSection = styled.div`
     background-color: #26C6DA;
 `;
 
-export default function Home() {
+export const Home = () => {
     return (
         <Wrapper>
             <HeaderSection>

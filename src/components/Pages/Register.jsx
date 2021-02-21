@@ -3,7 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { increaseCounter, decreaseCounter } from "../../actions";
 
-function Register(props) {
+export const Register = (props) => {
   return (
     <div>
       Test from register
