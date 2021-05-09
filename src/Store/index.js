@@ -14,9 +14,10 @@ class Store {
   constructor() {
     makeAutoObservable(this);
     getUserData(this.jwt, this);
+    getInitServices(this)
   }
 
-  getServices(services) {
+  setServices(services) {
     this.services = services;
   }
   setUser(user) {
@@ -62,6 +63,24 @@ async function getUserData(jwt, Store) {
     .then((data) => {
       Store.setUser(data);
       console.log(Store.user.name);
+      return;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+async function getInitServices(Store) {
+  
+  axios
+    .get("http://localhost:8000/services")
+    .then((res) => {
+      console.log(res.data);
+      return res.data;
+    })
+    .then((data) => {
+      Store.setServices(data);
+      console.log(data)
       return;
     })
     .catch((error) => {

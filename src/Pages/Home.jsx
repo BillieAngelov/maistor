@@ -1,9 +1,10 @@
 import React from "react";
+import ServicesList from "../Components/ServiceList"
 
 export const Home = () => {
   return (
     <>
-      <div>Hello from Home</div>;
+      <ServicesList />
     </>
   );
 };
