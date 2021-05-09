@@ -1,8 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
 
-export const Layout = ({children}) => {
-    return (
-        <div>{children}</div>
-    )
-}
+import Header from "./Header/Header";
+import Footer from "./Footer";
+
+export const Layout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+};

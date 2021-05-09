@@ -1,19 +1,16 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-import "./global.css";
-import { Layout } from "./components/Layout";
-import {Home} from "./components/Pages/Home";
-import {Register} from "./components/Pages/Register";
+import { Layout } from "./Components/Layout";
+import { Home } from "./Pages/Home";
+import { CreateService } from "./Pages/CreateService";
 
 export const App = () => {
   return (
     <Layout>
-        <Link to='/'>Home</Link>
-        <Link to='/register'>Register</Link>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/register' component={Register} />
+        <Route exact path="/" component={Home} />
+        <Route path="/my-services" component={CreateService} />
       </Switch>
     </Layout>
   );
