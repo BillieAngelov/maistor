@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import styled from "styled-components";
 import Store from "../Store";
 import { observer } from "mobx-react";
@@ -96,7 +96,7 @@ const ServicesList = observer(() => {
     <ServiceContainer>
       {Store.services &&
         Store.services.map((service) => (
-          <Link to={`${service.slug}`} key={service.id}>
+          <Link href={`${service.slug}`} key={service.name}>
             <ServiceCard>
               <ServImage className="service_image">
                 <ServImg

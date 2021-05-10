@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { LogoWrapper, NavContainer, Logo } from "./Header/Header";
 
-import logo from "../assets/logo/logo.png";
-import fbIcon from "../assets/icons/fb-icon.svg";
-import igIcon from "../assets/icons/ig-icon.svg";
-import linIcon from "../assets/icons/lin-icon.svg";
-import twIcon from "../assets/icons/tw-icon.svg";
-import ytIcon from "../assets/icons/yt-icon.svg";
+// import logo from "../assets/logo/logo.png";
+// import fbIcon from "../assets/icons/fb-icon.svg";
+// import igIcon from "../assets/icons/ig-icon.svg";
+// import linIcon from "../assets/icons/lin-icon.svg";
+// import twIcon from "../assets/icons/tw-icon.svg";
+// import ytIcon from "../assets/icons/yt-icon.svg";
 
 const FooterContainer = styled.footer`
   position: absolute;
@@ -29,16 +29,16 @@ const Footer = () => {
       <NavContainer>
         <LogoWrapper>
           <Logo>
-            <img src={logo} alt="Logo" />
+            <img src="/logo/logo.png" alt="Logo" />
           </Logo>
         </LogoWrapper>
 
         <IconContainer>
-          <FooterIcon src={fbIcon} alt="Facebook" />
-          <FooterIcon src={igIcon} alt="Instagram" />
-          <FooterIcon src={linIcon} alt="LinkedIn" />
-          <FooterIcon src={twIcon} alt="Tweeter" />
-          <FooterIcon src={ytIcon} alt="Youtube" />
+          <FooterIcon src="/icons/fb-icon.svg" alt="Facebook" />
+          <FooterIcon src="/icons/ig-icon.svg" alt="Instagram" />
+          <FooterIcon src="/icons/lin-icon.svg" alt="LinkedIn" />
+          <FooterIcon src="/icons/tw-icon.svg" alt="Tweeter" />
+          <FooterIcon src="/icons/yt-icon.svg" alt="Youtube" />
         </IconContainer>
       </NavContainer>
     </FooterContainer>

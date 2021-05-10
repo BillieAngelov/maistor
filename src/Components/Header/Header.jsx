@@ -7,9 +7,9 @@ import LoginModal from "../Header/LoginModal";
 import HeaderDropdown from "../Header/HeaderDropdown";
 import OutsideAlerter from "./OutsideAlerter";
 
-import logo from "../../assets/logo/logo.png";
-import search from "../../assets/icons/search.png";
-import defAvatar from "../../assets/avatar/defAvatar.png";
+// import logo from "../../assets/logo/logo.png";
+// import search from "../../assets/icons/search.png";
+// import defAvatar from "../../assets/avatar/defAvatar.png";
 
 const Nav = styled.nav`
   background-color: #01579b;
@@ -86,11 +86,11 @@ const Header = observer(() => {
       <NavContainer>
         <LogoWrapper>
           <Logo>
-            <img src={logo} alt="Logo" />
+            <img src="/logo/logo.png" alt="Logo" />
           </Logo>
           <SearchWrapper>
             <Search type="text" placeholder="Търси" />
-            <SearchIcon src={search} />
+            <SearchIcon src="/icons/search.png" />
           </SearchWrapper>
         </LogoWrapper>
 
@@ -108,7 +108,7 @@ const Header = observer(() => {
           ) : (
             <MyProfile onClick={(e) => Store.openForm()}>
               Моят профил
-              <Avatar src={defAvatar} alt="Default user avatar" />
+              <Avatar src="/avatar/defAvatar.png" alt="Default user avatar" />
             </MyProfile>
           )}
         </Menu>
@@ -122,7 +122,7 @@ export default Header;
 
 const checkForAvatar = (image) => {
   if (image === undefined || image === null) {
-    return defAvatar;
+    return "/avatar/defAvatar.png";
   } else {
     return `http://localhost:8000${image}`;
   }

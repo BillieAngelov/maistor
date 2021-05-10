@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Store from "../../Store";
 import { Logout } from "../../global";
 import { observer } from "mobx-react";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 
 const RelativeDiv = styled.div`
   position: relative;
@@ -29,16 +29,17 @@ const HeaderDropdown = observer(({ name }) => {
     <RelativeDiv>
       <div>{name}</div>
       <DropdownContainer style={{ display: Store.dropdown ? "flex" : "none" }}>
-        <Link to="/">
+        <Link href="/">
           <DropdownLink>Моят профил</DropdownLink>
         </Link>
-        <Link to="/favorites">
+        <Link href="/favorites">
           <DropdownLink>Запазени</DropdownLink>
         </Link>
-        <Link to="/my-services">
-          <DropdownLink>
-            {Store.user.services !== undefined ? "Моите обяви" : "Създай обява"}
-          </DropdownLink>
+        <Link href="/create-service">
+          <DropdownLink>Създай обява</DropdownLink>
+        </Link>
+        <Link href="/my-services">
+          <DropdownLink>Моите обяви</DropdownLink>
         </Link>
         <DropdownLink onClick={() => Logout()}>Изход</DropdownLink>
       </DropdownContainer>
