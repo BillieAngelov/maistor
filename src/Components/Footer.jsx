@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
+// Components
 import { LogoWrapper, NavContainer, Logo } from "./Header/Header";
 
-// import logo from "../assets/logo/logo.png";
-// import fbIcon from "../assets/icons/fb-icon.svg";
-// import igIcon from "../assets/icons/ig-icon.svg";
-// import linIcon from "../assets/icons/lin-icon.svg";
-// import twIcon from "../assets/icons/tw-icon.svg";
-// import ytIcon from "../assets/icons/yt-icon.svg";
 
 const FooterContainer = styled.footer`
   position: absolute;

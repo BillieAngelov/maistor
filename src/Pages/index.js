@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ServicesList from "../Components/ServiceList";
-import Store from "../Store"
+import Store from "../Store";
 
 export default function Index({ services }) {
   useEffect(() => {
@@ -8,11 +8,7 @@ export default function Index({ services }) {
     console.log(services);
   }, []);
 
-  return (
-    <>
-      <ServicesList />
-    </>
-  );
+  return <ServicesList />;
 }
 
 export async function getStaticProps() {

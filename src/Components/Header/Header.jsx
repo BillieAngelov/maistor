@@ -3,13 +3,10 @@ import styled from "styled-components";
 import Store from "../../Store";
 import { observer } from "mobx-react";
 
+// Components
 import LoginModal from "../Header/LoginModal";
 import HeaderDropdown from "../Header/HeaderDropdown";
 import OutsideAlerter from "./OutsideAlerter";
-
-// import logo from "../../assets/logo/logo.png";
-// import search from "../../assets/icons/search.png";
-// import defAvatar from "../../assets/avatar/defAvatar.png";
 
 const Nav = styled.nav`
   background-color: #01579b;

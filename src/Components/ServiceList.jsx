@@ -55,6 +55,7 @@ const AvatarSection = styled.div`
 const Paragraph = styled.p`
   margin: 0;
   padding-left: 10px;
+  font-size: 1.4em;
 `;
 const ServiceInfo = styled.div``;
 const Description = styled.div`
@@ -72,6 +73,7 @@ const Avatar = styled.img`
   width: 100%;
 `;
 const RatingAndPrice = styled.div`
+  font-size: 1.3em;
   display: flex;
   justify-content: space-between;
   background-color: hsl(0, 0%, 93%);
@@ -119,17 +121,23 @@ const ServicesList = observer(() => {
                 </ServiceInfo>
               </AvatarSection>
               <Description>{service.description}</Description>
-              {/* <RatingAndPrice>
+              <RatingAndPrice>
                 <div className="rating">
                   {calculateServiceRating(service)}
-                  <small>({service.comments.length})</small>
+                  <small>
+                    (
+                    {service.comments !== undefined
+                      ? service.comments.length
+                      : 0}
+                    )
+                  </small>
                 </div>
                 {service.price != null ? (
                   <StrongP>{service.price.toString()}лв.</StrongP>
                 ) : (
                   <StrongP>&nbsp;</StrongP>
                 )}
-              </RatingAndPrice> */}
+              </RatingAndPrice>
             </ServiceCard>
           </Link>
         ))}
@@ -140,6 +148,7 @@ const ServicesList = observer(() => {
 export default ServicesList;
 
 function calculateServiceRating(service) {
+  if (service.comments === undefined) return 0;
   if (service.comments.length === 0) return 0;
   let rating = 0;
   let comments = service.comments.length;

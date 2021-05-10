@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import styled from "styled-components";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useDropzone } from "react-dropzone";
 import { sendServiceData } from "../global";
 
+//Components
 import { Container } from "../global/globalStyles";
 
 const SignupSchema = Yup.object().shape({
@@ -69,18 +69,6 @@ const CreateService = () => {
             <label htmlFor="price">Стартова цена</label>
             <Field name="price" type="text" />
             <ErrorMessage name="price" />
-
-            {/* <label htmlFor="avatar">Аватар</label>
-            <input
-              type="file"
-              name="avatar"
-              onChange={event => {
-                setFieldValue("file", event.currentTarget.files[0]);
-              }}
-              alt="image"
-            />
-
-            <ErrorMessage name="avatar" /> */}
 
             <div {...getRootProps()}>
               <input {...getInputProps()} />

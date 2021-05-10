@@ -11,8 +11,11 @@ export default function Service({ service }) {
       </Link>
 
       <div>
-        <div>{service.title}</div>
-
+        <div>{service.name}</div>
+        <div>{service.description}</div>
+        {service.price != null ? (
+          <p>{service.price} лв.</p>
+        ) : null}
         <ImageSwiper images={service.images} />
       </div>
     </>

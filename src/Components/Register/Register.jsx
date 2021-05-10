@@ -27,9 +27,11 @@ export const Register = () => {
           name: "",
           email: "",
           password: "",
+          changepassword: "",
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
+          delete values.changepassword;
           console.log(values);
           registerToApp(values);
         }}
