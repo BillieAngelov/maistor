@@ -4,6 +4,12 @@ import styled from "styled-components";
 import Store from "../Store";
 import { observer } from "mobx-react";
 
+const ServiceContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
 const ServiceCard = styled.div`
   position: relative;
   max-width: 20%;
@@ -87,7 +93,7 @@ const ServImg = styled.img`
 
 const ServicesList = observer(() => {
   return (
-    <>
+    <ServiceContainer>
       {Store.services &&
         Store.services.map((service) => (
           <Link to={`${service.slug}`} key={service.id}>
@@ -127,7 +133,7 @@ const ServicesList = observer(() => {
             </ServiceCard>
           </Link>
         ))}
-    </>
+    </ServiceContainer>
   );
 });
 
